@@ -85,6 +85,5 @@ def get_scatter_plot(entered_site, payload_range):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
-    # print(spacex_df)
+    app.run_server()
     

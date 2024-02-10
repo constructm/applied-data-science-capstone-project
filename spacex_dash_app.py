@@ -79,12 +79,12 @@ def get_scatter_plot(entered_site, payload_range):
         
     data = filtered_data[(filtered_data['Payload Mass (kg)'] >= payload_range[0]) & (filtered_data['Payload Mass (kg)'] <= payload_range[1])]
 
-    fig = px.scatter(data, y='class', x='Payload Mass (kg)', color='Booster Version Category', title=f'Correlation Between Payload and Success for all {sites}')
+    fig = px.scatter(data, y='class', x='Payload Mass (kg)', color='Booster Version Category', title=f'Correlation Between Payload and Success for all {sites}', size='Payload Mass (kg)', size_max=30)
 
     return fig
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True)
     # print(spacex_df)
     
